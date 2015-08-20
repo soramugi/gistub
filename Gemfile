@@ -26,6 +26,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'dotenv-rails'
   gem 'bullet'
   gem 'pry-rails'
   gem 'sqlite3', :platforms => :ruby

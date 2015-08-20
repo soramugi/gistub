@@ -4,6 +4,7 @@
 .project
 .rvmrc
 .idea
+.env
 Thumbs.db
 log/*.log
 db/*.sqlite3
