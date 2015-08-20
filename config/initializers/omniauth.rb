@@ -1,7 +1,4 @@
 # -*- encoding : utf-8 -*-
 Rails.application.config.middleware.use OmniAuth::Builder do
-  require 'openid/store/filesystem'
-  provider :open_id,
-           :identifier => ENV['GISTUB_OPENID_IDENTIFIER'].presence || 'https://www.google.com/accounts/o8/id',
-           :store => OpenID::Store::Filesystem.new("#{Rails.root}/tmp/openid")
+  provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
 end
