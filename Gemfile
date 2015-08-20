@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.13'
 gem 'jquery-rails'
 gem 'rails_autolink'
+gem 'dotenv-rails'
 
 gem 'qiita-markdown', :platforms => :ruby
 gem 'kramdown',       :platforms => :jruby
@@ -23,10 +24,15 @@ group :development do
   gem 'better_errors', '1.1.0'
   gem 'magic_encoding'
   gem 'binding_of_caller', :platforms => :ruby
+
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-scm-copy'
 end
 
 group :test, :development do
-  gem 'dotenv-rails'
   gem 'bullet'
   gem 'pry-rails'
   gem 'sqlite3', :platforms => :ruby
@@ -36,6 +42,10 @@ group :test, :development do
   # TODO: rspec 3
   gem 'rspec-rails', '2.14.2'
   gem 'rspec-kickstarter'
+end
+
+group :production do
+  gem 'unicorn'
 end
 
 group :test do

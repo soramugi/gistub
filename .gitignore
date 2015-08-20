@@ -19,4 +19,4 @@ test/reports
 out/
 untitled/
 *.iml
-
+config/deploy/production.rb

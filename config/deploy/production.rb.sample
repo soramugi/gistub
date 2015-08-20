@@ -1,0 +1,17 @@
+set :rbenv_type, :system
+set :rbenv_ruby, '2.1.1'
+set :deploy_to, '/path/to/deploy'
+
+set :stage, :production
+set :rails_env, 'production'
+set :migration_role, 'db'
+
+server 'host',
+  user: 'user',
+  port: 22,
+  roles: %w{web app db},
+  ssh_options: {
+    keys: %w(~/.ssh/authorized_keys),
+    forward_agent: true,
+    auth_methods: %w(publickey)
+  }
