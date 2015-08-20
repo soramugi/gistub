@@ -17,6 +17,6 @@ coverage
 |
 
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
-set :linked_files, %w{config/database.yml .env db/production.sqlite3}
+set :linked_files, %w{.env db/production.sqlite3}
 
 set :keep_releases, 5
