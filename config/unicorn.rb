@@ -21,7 +21,7 @@ worker_processes 3
 
 # Help ensure your application will always spawn in the symlinked
 # "current" directory that Capistrano sets up.
-working_directory "/usr/local/rails/otome/current" # available in 0.94.0+
+working_directory "/usr/local/rails/gistub/current" # available in 0.94.0+
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
@@ -101,5 +101,5 @@ after_fork do |server, worker|
 end
 
 before_exec do |server|
-  ENV['BUNDLE_GEMFILE'] = "/usr/local/rails/otome/current/Gemfile"
+  ENV['BUNDLE_GEMFILE'] = "/usr/local/rails/gistub/current/Gemfile"
 end

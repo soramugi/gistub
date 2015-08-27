@@ -5,6 +5,7 @@ gem 'rails', '4.0.13'
 gem 'jquery-rails'
 gem 'rails_autolink'
 gem 'dotenv-rails'
+gem 'sqlite3'
 
 gem 'qiita-markdown', :platforms => :ruby
 gem 'kramdown',       :platforms => :jruby
@@ -13,11 +14,18 @@ gem 'omniauth-github'
 gem 'erubis'
 gem 'kaminari'
 
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'therubyracer', :platforms => :ruby
+gem 'therubyrhino', :platforms => :jruby
+gem 'uglifier', '>= 1.0.3'
+
+
 gem 'simple_form'
 
 gem 'coveralls', require: false
 
-gem 'pg', group: :postgresql
+#gem 'pg', group: :postgresql
 
 group :development do
   # better_errors 2.0 requires Ruby 2.0 or higher
@@ -35,7 +43,6 @@ end
 group :test, :development do
   gem 'bullet'
   gem 'pry-rails'
-  gem 'sqlite3', :platforms => :ruby
   gem 'activerecord-jdbcsqlite3-adapter', :platforms => :jruby
   gem 'factory_girl'
   gem 'factory_girl_rails'
@@ -51,14 +58,6 @@ end
 group :test do
   gem 'simplecov', :require => false
   gem 'simplecov-rcov', :require => false
-end
-
-group :assets do
-  gem 'less-rails'
-  gem 'twitter-bootstrap-rails'
-  gem 'therubyracer', :platforms => :ruby
-  gem 'therubyrhino', :platforms => :jruby
-  gem 'uglifier', '>= 1.0.3'
 end
 
 group :server do

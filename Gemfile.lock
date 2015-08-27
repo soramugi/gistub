@@ -159,7 +159,6 @@ GEM
     omniauth-oauth2 (1.3.1)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    pg (0.18.2)
     posix-spawn (0.3.11)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -313,7 +312,6 @@ DEPENDENCIES
   magic_encoding
   mizuno
   omniauth-github
-  pg
   pry-rails
   qiita-markdown
   rails (= 4.0.13)
@@ -332,4 +330,4 @@ DEPENDENCIES
   unicorn
 
 BUNDLED WITH
-   1.10.5
+   1.10.6
